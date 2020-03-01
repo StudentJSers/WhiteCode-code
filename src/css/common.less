@@ -1,0 +1,102 @@
+@url: '../../img/';
+@image_url: '../../images/';
+@image_url2: '../images/';
+
+html,
+body {
+    touch-action: none;
+    // position: fixed;
+    overflow: hidden;
+}
+
+#__next {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+html,
+body,
+.wrapper,
+.entry {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.wrapper,
+.entry {
+    position: relative;
+    min-width: 1024px;
+}
+.engineContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 294px;
+    height: 100%;
+    padding: 46px 16px 8px 8px;
+}
+.backgroundImage(@imageName) {
+    background-image: url('@{image_url2}@{imageName}');
+}
+
+.dragNone {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.entryHidden {
+    visibility: hidden;
+}
+
+.entryRemove {
+    display: none !important;
+}
+
+.entryHide {
+    visibility: hidden;
+}
+
+.entryRemoveCategory {
+    display: none !important;
+}
+
+.entryRemoveElement {
+    display: none !important;
+}
+
+.entryNoDeco {
+    text-decoration: none !important;
+}
+
+.entryBtn {
+    border: none;
+    margin: 0;
+    background-color: transparent;
+}
+
+.entryDimmed {
+    opacity: 0.5;
+    background-color: #767676;
+}
+
+#entryInputForComputeWidth {
+    visibility: hidden;
+    position: fixed;
+    left: -9999px;
+    top: -9999px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}

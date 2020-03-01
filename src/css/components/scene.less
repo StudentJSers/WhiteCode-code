@@ -1,0 +1,177 @@
+body {
+    & > .sortableItem {
+        z-index: 250;
+    }
+}
+
+.entrySceneWorkspace {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 38px;
+    padding-top: 1px;
+    background-color: @baseblue;
+    overflow: hidden;
+    z-index: 10;
+
+    .practical_course_mode & {
+        background-color: @basePurple;
+    }
+}
+
+.entrySceneListWorkspace {
+    overflow: hidden;
+    float: left;
+    margin: 0;
+    padding: 0 0 0 7px;
+    max-width: calc(100% - 43px);
+
+    .rcs-custom-scroll .rcs-outer-container {
+        overflow: visible;
+        .rcs-inner-container {
+            overflow: visible;
+        }
+    }
+
+    .sortableItem {
+        z-index: 15;
+    }
+}
+
+.entrySceneElementWorkspace {
+    overflow: hidden;
+    margin: 5px 2px 0 0;
+    color: white;
+    cursor: move;
+    z-index: 10;
+}
+
+.entrySceneElementWorkspace.selectedScene {
+    position: relative;
+    margin-top: 0;
+    z-index: 888;
+}
+.entrySceneAddButtonWorkspace{
+    float: left;
+    position: relative;
+    margin: 9px 0 0 -2px;
+    width: 44px;
+    height: 30px;
+    cursor: pointer;
+    .backgroundImage("top_icon_add_b_nor.png");
+    background-size: 44px auto;
+}
+
+.selectedScene {
+    .entrySceneInputCover {
+        min-width: 97px;
+    }
+}
+
+.entrySceneInputCover {
+    display: block;
+    overflow: hidden;
+    height: 32px;
+    padding: 4px 10px 0;
+    border-bottom: 2px solid transparent;
+    background-color: #99c4ff;
+    border-radius: 10px 10px 0 0;
+}
+
+.entrySceneFieldWorkspace {
+    cursor: text !important;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0px;
+    height: 24px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: 0;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 24px;
+}
+
+.selectedScene .entrySceneInputCover {
+    height: 37px;
+    padding: 7px 30px 0 10px;
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+    border-bottom-color: #ffb500;
+}
+
+.selectedScene .entrySceneFieldWorkspace {
+    background-color: #fff;
+    font-size: 14px;
+    color: #ffb500;
+}
+.selectedScene .entrySceneFieldWorkspace:focus {
+    font-size: 12px;
+    border: 1px solid #e2e2e2;
+    color: #2c313d;
+}
+.entrySceneRemoveButtonWorkspace {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    display: none;
+    .backgroundImage("scene_delete_unselect.png");
+    background-size: 10px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+.minValue .entrySceneRemoveButtonWorkspace {
+    display: none;
+}
+
+.selectedScene .entrySceneRemoveButtonWorkspace {
+    display: block;
+    top: 3px;
+    background-color: transparent;
+    .backgroundImage("scene_delete.png");
+}
+
+// .entrySceneRemoveButtonWorkspace:hover {
+//     .backgroundImage("scene_delete_hover.png");
+// }
+
+.entrySceneDummyView {
+    width: 55px;
+    height: 40px;
+    background-color: orange;
+    display: inline-block;
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 889;
+    left: 100px;
+}
+
+.tablet {
+    .entrySceneRemoveButtonWorkspace {
+        width: 14px;
+        height: 14px;
+        right: 48px;
+        .backgroundImage("scene_delete_unselect_big.png");
+    }
+
+    .selectedScene .entrySceneRemoveButtonWorkspace {
+        .backgroundImage("scene_delete_big.png");
+    }
+
+    .entrySceneRemoveButtonWorkspace:hover {
+        .backgroundImage("scene_delete_hover_big.png");
+    }
+}
+

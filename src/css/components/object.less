@@ -1,0 +1,480 @@
+.objectInfoView {
+    list-style: none;
+    padding: 0;
+    height: 60px;
+    width: 18px;
+    position: relative;
+    margin-left: 8px;
+    float: left;
+}
+
+.objectInfo_visible {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-size: 18px auto;
+    cursor: pointer;
+    .box-sizing(border-box);
+    .backgroundImage('layers_icon_visible.png');
+}
+
+.objectInfo_unvisible {
+    .backgroundImage('layers_icon_unvisible.png');
+}
+
+.objectInfo_unlock {
+    display: inline-block;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-size: 18px auto;
+    .backgroundImage('layers_icon_unlock.png');
+    cursor: pointer;
+    .box-sizing(border-box);
+}
+
+.objectInfo_lock {
+    .backgroundImage('layers_icon_lock.png');
+}
+
+.entryDisabled {
+    .objectInfo_visible {
+        .backgroundImage('layers_icon_visible_disabled.png');
+        cursor: default;
+    }
+    .objectInfo_unlock {
+        .backgroundImage('layers_icon_lock_disabled.png');
+        cursor: default;
+    }
+    .entryObjectDeleteWorkspace {
+        .backgroundImage('layers_icon_close_nor_new_disabled.png');
+        background-size: 26px auto;
+        cursor: default;
+    }
+    input {
+        color: #cbcbcb;
+    }
+    &.selectedObject {
+        .entryObjectWrapperWorkspace .entryObjectNameWorkspace {
+            color: #cbcbcb;
+        }
+    }
+}
+
+.entryObjectThumbnailWorkspace {
+    overflow: hidden;
+    cursor: move;
+    position: absolute;
+    top: 8px;
+    left: 34px;
+    height: 44px;
+    width: 40px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    background-color: #fff;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.entryObjectTextBox {
+        .backgroundImage('text_icon.svg');
+        background-size: cover;
+    }
+}
+
+.entryObjectWrapperWorkspace {
+    overflow: hidden;
+    position: relative;
+    margin: 16px 78px 0 82px;
+}
+
+.entryObjectNameWorkspace {
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+    max-width: 283px;
+    width: calc(100% - 28px);
+    margin-right: 4px;
+    padding: 7px 4px 6px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c313d;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 11px;
+}
+
+.selectedObject {
+    .entryObjectNameWorkspace:focus {
+        border-color: #4f80ff;
+    }
+}
+
+.editButtonToggle {
+    display: block;
+}
+.editButtonToggle_ {
+    display: none;
+}
+
+.selectedNotEditionObject {
+    background-color: transparent;
+}
+
+.selectedNotEditionObject:hover {
+    background-color: transparent;
+}
+
+.selectedNotEditionObject:focus {
+    background-color: transparent !important;
+}
+/*sj*/
+
+.selectedObject > .entryObjectWrapperWorkspace > .entryObjectNameWorkspace {
+    color: #2c313d;
+    font-family: EntryFont, NanumGothic !important;
+}
+
+.entryObjectNameWorkspace:disabled {
+    background-color: #fff;
+}
+
+.entryObjectDeleteWorkspace {
+    overflow: hidden;
+    position: absolute;
+    right: 26px;
+    top: 18px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    background-size: 10px auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    .backgroundImage('layers_icon_close_nor_new.png');
+}
+
+.entryObjectDeletePhone {
+    float: left;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 57px;
+    top: 25px;
+    cursor: pointer;
+    .backgroundImage('layers_icon_close_nor.png');
+}
+
+.entryObjectEditPhone {
+    float: left;
+    position: absolute;
+    width: 24px;
+    background-repeat: no-repeat;
+    height: 21px;
+    right: 17px;
+    background-color: transparent;
+    border: none;
+    top: 21px;
+    cursor: pointer;
+    .backgroundImage('glyphicons_150_edit.png');
+}
+
+.entryObjectSelectedImgWorkspace {
+    position: absolute;
+    width: 16px;
+    right: 0;
+    top: 45px;
+    bottom: 0;
+    cursor: col-resize;
+    .backgroundImage('entry_scroll.png');
+    background-repeat: no-repeat;
+    background-size: 6px auto;
+    background-position: 50% 50%;
+    z-index: 250;
+}
+
+.selectedObject .entryObjectSelectedImgWorkspace {
+    float: left;
+    position: absolute;
+    width: 14px;
+    height: 26px;
+    right: 0;
+    top: 20px;
+    cursor: col-resize;
+    .backgroundImage('entry_scroll.png');
+}
+
+.entryObjectCoordinateWorkspace {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c313d;
+    letter-spacing: -0.4px;
+    width: auto;
+}
+
+.entryObjectCoordinateSpanWorkspace {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+.selectedObject > .entryObjectWrapperWorkspace > .entryObjectCoordinateWorkspace {
+    color: black;
+}
+
+.entryObjectInformationWorkspace {
+    display: inline-block;
+    right: 0;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+    background-size: 8px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    .backgroundImage('layers_arrow_down_nor.png');
+}
+
+.selectedObject .entryObjectInformationWorkspace {
+    .backgroundImage('layers_arrow_up_nor.png');
+}
+
+.fold .entryObjectInformationWorkspace {
+    .backgroundImage('layers_arrow_down_nor.png');
+}
+
+.informationToggle > .entryObjectWrapperWorkspace > .entryObjectInformationWorkspace {
+    .backgroundImage('layers_arrow_down_nor_1.png');
+}
+
+.entryObjectButtonWorkspace {
+    display: none;
+    float: right;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #bcc3c9;
+    border-radius: 50%;
+    margin: 10px 10px 10px 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    color: white;
+    font-size: 7.5pt;
+    padding: 23px 0 0 0;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.informationToggle > .entryObjectButtonWorkspace {
+    display: none;
+}
+
+.entryObjectSoundWorkspace {
+    .backgroundImage('icon_sound.png');
+    background-color: #6a9a1f;
+}
+
+.entryObjectSoundWorkspace:hover {
+    background-color: #83af3d;
+}
+
+.entryObjectPictureWorkspace {
+    .backgroundImage('icon_picture.png');
+    background-color: #f26724;
+}
+
+.entryObjectPictureWorkspace:hover {
+    background-color: #f3783c;
+}
+
+.entryObjectCodeWorkspace {
+    .backgroundImage('icon_code.png');
+    background-color: #00ace9;
+}
+
+.entryObjectCodeWorkspace:hover {
+    background-color: #5fc8ee;
+}
+
+.entryObjectTextWorkspace {
+    .backgroundImage('text_icon_white.png');
+    background-color: #f3bb1d;
+    background-position: 50% 20%;
+    background-size: 75%;
+}
+
+.entryObjectRotationWrapperWorkspace {
+    position: relative;
+    display: none;
+    width: 100%;
+    padding: 18px 8px 7px;
+    border: 1px solid #d6e9f4;
+    background-color: #d6e9f4;
+    clear: both;
+}
+
+.collapsed .entryObjectRotationWrapperWorkspace {
+    height: 90px;
+}
+
+.selectedObject .entryObjectRotationWrapperWorkspace {
+    display: inline-block;
+}
+
+.fold .entryObjectRotationWrapperWorkspace {
+    display: none;
+}
+
+.informationToggle > .entryObjectRotationWrapperWorkspace {
+    display: inline-block;
+}
+
+.rotationMethodWrapper {
+    margin: 16px -8px 0;
+    padding: 7px 8px 0;
+    border-top: 1px solid #fff;
+}
+
+.collapsed .rotationMethodWrapper {
+    float: left;
+    position: absolute;
+    bottom: 9px;
+}
+
+.entryObjectRotateMethodLabelWorkspace {
+    display: inline-block;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c313d;
+    vertical-align: top;
+}
+
+.entryObjectRotateLabelWrapperWorkspace {
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c313d;
+}
+
+.entryObjectRotateInputWorkspace,
+.entryObjectDirectionInputWorkspace {
+    width: 48px;
+    height: 24px;
+    box-sizing: border-box;
+    margin-left: 4px;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c313d;
+    letter-spacing: -0.4px;
+    text-align: center;
+}
+.entryObjectRotateInputWorkspace:focus,
+.entryObjectRotateInputWorkspace:active,
+.entryObjectDirectionInputWorkspace:focus,
+.entryObjectDirectionInputWorkspace:active {
+    border-color: #4f80ff;
+}
+
+.entryObjectDirectionSpanWorkspace,
+.entryObjectRotateSpanWorkspace {
+    display: inline-block;
+    margin: 2px 0 0 0;
+    vertical-align: top;
+}
+.entryObjectRotateInputWorkspace + .entryObjectDirectionSpanWorkspace {
+    margin-left: 10px;
+}
+.entryObjectRotateInputWorkspace.entryRemove + .entryObjectDirectionSpanWorkspace {
+    margin-left: 0;
+}
+
+.entryObjectRotateModeWorkspace {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+    background-size: 30px auto;
+}
+
+.entryObjectRotateModeAWorkspace {
+    margin-left: 12px;
+    .backgroundImage('layers_icon_rotate01_nor.png');
+}
+
+.entryObjectRotateModeAWorkspace.selected {
+    .backgroundImage('layers_icon_rotate01_sel.png');
+}
+
+.entryObjectRotateModeBWorkspace {
+    margin-left: 12px;
+    .backgroundImage('layers_icon_rotate02_nor.png');
+}
+
+.entryObjectRotateModeBWorkspace.selected {
+    .backgroundImage('layers_icon_rotate02_sel.png');
+}
+
+.entryObjectRotateModeCWorkspace {
+    margin-left: 12px;
+    .backgroundImage('layers_icon_rotate03_nor.png');
+}
+
+.entryObjectRotateModeCWorkspace.selected {
+    .backgroundImage('layers_icon_rotate03_sel.png');
+}
+
+.entryObjectCoordinateSpanWorkspace:nth-child(3) {
+    margin-left: 12px;
+    position: relative;
+}
+
+.entryObjectCoordinateSizeWorkspace {
+    display: inline-block;
+    margin: 2px 0 0 10px;
+    position: relative;
+    float: none;
+    vertical-align: top;
+}
+
+.entryObjectCoordinateInputWorkspace {
+    width: 48px;
+    height: 24px;
+    margin-left: 6px;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c313d;
+    letter-spacing: -0.4px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.entryObjectCoordinateInputWorkspace:focus,
+.entryObjectCoordinateInputWorkspace:active {
+    border-color: #4f80ff;
+}
+
+.entryObjectCoordinateInputWorkspace_size {
+    float: none;
+    position: relative;
+}

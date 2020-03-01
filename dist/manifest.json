@@ -1,0 +1,8 @@
+{
+  "0.js": "/dist/0.js",
+  "0.js.map": "/dist/0.js.map",
+  "entry.css": "/dist/entry.css",
+  "entry.js": "/dist/entry.js",
+  "entry.css.map": "/dist/entry.css.map",
+  "entry.js.map": "/dist/entry.js.map"
+}

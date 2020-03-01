@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+//        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "esnext",
+        "target": "es5",
+        "downlevelIteration": true,
+        "moduleResolution": "node",
+        "lib": ["es6", "dom"],
+        "allowJs": true,
+        "typeRoots": ["./types", "./node_modules/@types"]
+    }
+}

@@ -1,0 +1,173 @@
+.entryBoard {
+    cursor: move;
+    position: absolute;
+    -ms-touch-action: none;
+}
+
+.entryOverlayBoard {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.boardScrollbar {
+    opacity: 1;
+    cursor: move;
+    -ms-touch-action: none;
+
+    .scrollbar {
+        transition: opacity 0.5s;
+        cursor: pointer;
+    }
+}
+
+.boardScrollbar:hover {
+    opacity: 0.6;
+}
+
+.entryBoardWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+
+.entryVimBoard {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.entryFunctionButton {
+    font-family: ng !important;
+    font-size: 13 !important;
+    text-anchor: middle;
+    fill: #ffffff;
+    cursor: pointer !important;
+}
+
+.entryFunctionButtonText {
+    font-family: ng !important;
+    font-size: 13 !important;
+    text-anchor: middle;
+    fill: #4f80ff;
+    cursor: pointer !important;
+}
+
+.entryFunctionButtonBorder {
+    font-family: ng !important;
+    font-size: 13 !important;
+    text-anchor: middle;
+    fill: #ffffff;
+    cursor: pointer !important;
+    stroke: #4f80ff;
+    stroke-width: 1;
+}
+
+.entryWorkspaceBoard {
+    position: absolute;
+    left: 254px;
+    top: 0;
+    bottom: 0;
+    right: 0px;
+    border: 1px solid #d6e9f4;
+    border-width: 1px 0;
+    overflow: hidden;
+    .backgroundImage('entry_bg.svg');
+}
+
+.entryWorkspaceBoard.folding {
+    z-index: 252;
+    // border-left: solid 1px #c4c4b9;
+    .animation-duration(0.7s);
+    .animation-name(foldBoard);
+    .animation-fill-mode(forwards);
+}
+
+@keyframes foldBoard {
+    from {
+    }
+    to {
+        left: 61px;
+    }
+}
+
+@-ms-keyframes foldBoard {
+    from {
+    }
+    to {
+        left: 61px;
+    }
+}
+
+@-moz-keyframes foldBoard {
+    from {
+    }
+    to {
+        left: 61px;
+    }
+}
+
+@-webkit-keyframes foldBoard {
+    from {
+    }
+    to {
+        left: 61px;
+    }
+}
+
+.entryWorkspaceBoard.foldOut {
+    z-index: 300;
+    .animation-duration(0.7s);
+    .animation-name(foldOutBoard);
+    .animation-fill-mode(forwards);
+}
+
+@keyframes foldOutBoard {
+    from {
+        left: 64px;
+    }
+    to {
+    }
+}
+
+@-o-keyframes foldOutBoard {
+    from {
+        left: 61px;
+    }
+    to {
+    }
+}
+
+@-ms-keyframes foldOutBoard {
+    from {
+        left: 61px;
+    }
+    to {
+    }
+}
+
+@-moz-keyframes foldOutBoard {
+    from {
+        left: 61px;
+    }
+    to {
+    }
+}
+
+@-webkit-keyframes foldOutBoard {
+    from {
+        left: 61px;
+    }
+    to {
+    }
+}
+
+#invisibleBoard {
+    visibility: hidden;
+    position: fixed;
+    left: -1000px;
+    top: -1000px;
+}
