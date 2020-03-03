@@ -1063,6 +1063,7 @@ Lang.Blocks = {
     "FLOW_wait_until_true_2": "이(가) 될 때까지 기다리기",
     "FLOW_when_clone_start": "복제본이 처음 생성되었을때",
     "FUNC": "함수",
+    "OTHER": "기타",
     "JUDGEMENT": "판단",
     "JUDGEMENT_boolean_and": "그리고",
     "JUDGEMENT_boolean_not_1": "",

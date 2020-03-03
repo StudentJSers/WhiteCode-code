@@ -1,9 +1,61 @@
 module.exports = {
     getBlocks() {
         return {
+            runJS: {
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
+                skeleton: 'basic',
+                template: "JS 코드 %1 실행하기",
+                statements: [],
+                params: [
+                    {
+                        type: 'Block',
+                        accept: 'string',
+                    },
+                    {
+                        type: 'Indicator',
+                        img: 'block_icon/hardware_icon.svg',
+                        size: 11,
+                    },
+                ],
+                events: {},
+                def: {
+                    params: [
+                        {
+                            type: 'text',
+                            params: ['Hello, world!'],
+                        },
+                    ],
+                    type: 'runJS',
+                },
+                pyHelpDef: {
+                    params: [
+                        {
+                            type: 'text',
+                            params: ['A&value'],
+                        },
+                        null,
+                    ],
+                    type: 'runJS',
+                },
+                paramsKeyMap: {
+                    VALUE: 0,
+                },
+                class: 'text',
+                isNotFor: [],
+                func(sprite, script) {
+                    const message = script.getValue('VALUE', script);
+
+                    eval(message);
+                    return script.callReturn();
+                },
+                syntax: { js: [], py: ['run(%1)'] },
+            },
+
+
             console_log: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "콘솔에 %1 출력하기",
                 statements: [],
@@ -25,7 +77,6 @@ module.exports = {
                             type: 'text',
                             params: ['Hello, world!'],
                         },
-                        null,
                     ],
                     type: 'console_log',
                 },
@@ -53,8 +104,8 @@ module.exports = {
                 syntax: { js: [], py: ['console.log(%1)'] },
             },
             console_warn: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "콘솔에 경고 %1 출력하기",
                 statements: [],
@@ -104,8 +155,8 @@ module.exports = {
                 syntax: { js: [], py: ['console.warn(%1)'] },
             },
             console_error: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "콘솔에 오류 %1 출력하기",
                 statements: [],
@@ -155,8 +206,8 @@ module.exports = {
                 syntax: { js: [], py: ['console.error(%1)'] },
             },
             alert: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "경고창 %1 출력하기",
                 statements: [],
@@ -210,8 +261,8 @@ module.exports = {
 
 
             toast_success: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "토스트 %1 성공 출력하기",
                 statements: [],
@@ -260,8 +311,8 @@ module.exports = {
                 syntax: { js: [], py: ['toast_success(%1)'] },
             },
             toast_warning: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "토스트 %1 경고 출력하기",
                 statements: [],
@@ -310,8 +361,8 @@ module.exports = {
                 syntax: { js: [], py: ['toast_warning(%1)'] },
             },
             toast_alert: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "토스트 %1 오류 출력하기",
                 statements: [],
@@ -361,8 +412,8 @@ module.exports = {
             },
 
             stop_project: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: '작품 멈추기',
                 statements: [],
@@ -388,8 +439,8 @@ module.exports = {
             },
 
             entry_console_print: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "엔트리 콘솔에 %1 출력하기",
                 statements: [],
@@ -439,8 +490,8 @@ module.exports = {
             },
 
             entry_console_clear: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic',
                 template: "엔트리 콘솔 모두 지우기",
                 statements: [],
@@ -488,8 +539,8 @@ module.exports = {
             },
 
             get_browser: {
-                color: EntryStatic.colorSet.block.default.HARDWARE,
-                outerLine: EntryStatic.colorSet.block.darken.HARDWARE,
+                color: EntryStatic.colorSet.block.default.OTHER,
+                outerLine: EntryStatic.colorSet.block.darken.OTHER,
                 skeleton: 'basic_string_field',
                 template: '브라우저 정보',
                 statements: [],

@@ -374,6 +374,7 @@ EntryStatic.getAllBlocks = function() {
         {
             category: 'other',
             blocks: [
+                'runJS',
                 "console_log",
                 "console_warn",
                 "console_error",
@@ -714,7 +715,7 @@ EntryStatic.colorSet = {
             JUDGE: '#89A1F7',
             CALC: '#E8B349',
             VARIABLE: '#CE38CE',
-            HARDWARE: '#FFFFFF',
+            OTHER: '#FFFFFF',
             EXPANSION: '#FF8888',
             HIDDEN: '#FFFFFF',
         },
@@ -732,7 +733,7 @@ EntryStatic.colorSet = {
             CALC: '#f4af18',
             VARIABLE: '#dd47d8',
             FUNC: '#de5c04',
-            HARDWARE: '#00b6b1',
+            OTHER: '#00b6b1',
             EXPANSION: '#ef6d6d',
             HIDDEN: '#8aa3b2',
         },
@@ -748,7 +749,7 @@ EntryStatic.colorSet = {
             CALC: '#ffde82',
             VARIABLE: '#f778f3',
             FUNC: '#ff7b22',
-            HARDWARE: '#78d5d3',
+            OTHER: '#78d5d3',
             EXPANSION: '#ffaeae',
             HIDDEN: '#ffaeae',
         },
@@ -764,7 +765,7 @@ EntryStatic.colorSet = {
             CALC: '#ff7f00',
             VARIABLE: '#b819b3',
             FUNC: '#a14100',
-            HARDWARE: '#008380',
+            OTHER: '#008380',
             EXPANSION: '#c63f3f',
             HIDDEN: '#728997',
         },
@@ -780,7 +781,7 @@ EntryStatic.colorSet = {
             '#f4af18': '#FCDA90', //CALC
             '#dd47d8': '#F279F2', //VARIABLE
             '#de5c04': '#DD884E', //FUNC
-            '#00b6b1': '#09BAB5', //HARDWARE
+            '#00b6b1': '#09BAB5', //OTHER
             //Not guided emphasize color for EXPANSION
         },
     },
